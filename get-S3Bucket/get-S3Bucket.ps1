@@ -9,9 +9,9 @@ param (
     $S3Bucket,
 
     # Optional parameter specifying the base directory for downloads (default: d:\<bucket_name>)
-    [Parameter()]
+    [Parameter(mandantory = $true)]
     [string]
-    $OutputFolder = "d:\$S3Bucket",
+    $OutputFolder,
 
     # Optional switch to list keys in the S3 bucket instead of downloading
     [Parameter()]
